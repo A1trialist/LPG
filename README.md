@@ -91,11 +91,4 @@ The detailed parameters of the BUPT-3 satellite are summarized below:
 
 [ECIES](https://github.com/ecies)
 
-[LOCA] Zhihong Luo, Silvery Fu, Natacha Crooks, Shaddi Hasan, Christian Maciocco, Sylvia Ratnasamy, and Scott Shenker. Loca: A location-oblivious cellular architecture. In NSDI, 2023.
-
-[PGPP] Paul Schmitt and Barath Raghavan. Pretty good phone privacy. In USENIX Security, 2021.
-
-[MOSAIC] Lixin Liu, Yuanjie Li, Hewu Li, Jiabo Yang, Wei Liu, Jingyi Lan, Yufeng Wang, Jiarui Li, Jianping Wu, Qian Wu, et al. Democratizing direct-to-cell low earth orbit satellite networks. In NSDI, 2024.
-
-[SPACECORE] Yuanjie Li, Hewu Li, Wei Liu, Lixin Liu, Yimei Chen, Jianping Wu, Qian Wu, Jun Liu, and Zeqi Lai. A case for stateless mobile core network functions in space. In ACM SIGCOMM, 2022.
 
