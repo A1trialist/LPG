@@ -2,21 +2,11 @@
 
 This repository contains artifact of our USENIX Security'26 paper *LPG: Raise Your Location Privacy Game in Direct-to-Cell LEO Satellite Networks*.
 
-LPG is a framework for protecting location privacy at the protocol layer operating on an our academic satellite. 
+LPG is a framework for protecting location privacy at the protocol level operating on an our academic satellite. 
 
 The LEO satellite used in our experiments are not for commercial use, only for acadamic research. It replicates the satellite structure for COTS computing devices to minimize the impact of unrelated factors. Due to the double-blindness and licensing restrictions, we do not disclose all parameters, protocols and agreement contents of the satellite. We only make those contents that have no impact on the safety of satellite operation publicly available, and they can prove the conclusions and procedures of LPG. 
 
 This repository provides artifacts about LPG, and it also could help the community understand how to conduct experiments on acadamic satellites.
-
-## Hardware Settings
-
-Our in-orbit testbed consists of three main components:
-
-**LEO Satellite:** An academic COTS LEO satellite equipped with two commodity servers (8-core ARM processors, 16 GB DDR4 RAM, 256 GB storage) as payload.
-
-**Ground Server:** A terrestrial server acting as the MNO, with an Intel Xeon Gold 6330 CPU and 256 GB of RAM.
-
-**User Equipment (UE):** Two commodity phones, a Xiaomi 14 Ultra and a Google Pixel 9 Pro, used for end-to-end testing.
 
 
 ## On-Board Satellite Experiment Procedures
@@ -55,6 +45,42 @@ The plot.ipynb file can generate all figures in section 5 of LPG paper.
 
 In `./Results`  we provide the datasets used in the LPG section 5 Evaluation. By comparing the timestamps of log and telemetry records, we can get the temperature and power metrics of the on-board implementation of certain protocols.
 
+
+## Hardware Settings
+
+Our in-orbit testbed consists of three main components:
+
+**LEO Satellite:** our experiments are conducted on BUPT-3, a space science and technology demonstration satellite. It operates in a sun-synchronous orbit and is equipped with commodity servers (8-core ARM processors, 16 GB DDR4 RAM, 256 GB storage) as payload to support in-orbit computing tasks.
+
+The detailed parameters of the BUPT-3 satellite are summarized below:
+
+| Parameter                   | Value                                     |
+|-----------------------------|-------------------------------------------|
+| Name                        | BUPT-3 (TY46)                             |
+| COSPAR ID                   | 2025-103F                                 |
+| NORAD / SATCAT ID           | 64053                                     |
+| Launch Vehicle              | Zhuque-2E                                 |
+| Launch Date                 | 2025-05-17 04:12 UTC                      |
+| Orbit Type                  | Sun-synchronous Orbit                     |
+| Orbital Altitude            | ~509.6 km to ~514.3 km                    |
+| Semi-major Axis             | ~6890 km                                  |
+| Orbital Inclination         | 97.41°                                    |
+| Eccentricity                | ~0.00034                                  |
+| Argument of Perigee         | 183.5°                                    |
+| Local Time of Ascending Node| 10:30 AM                                  |
+| Orbital Period              | ~95 min                                   |
+| Repeat Cycle                | ~12 days                                  |
+| Mass                        | ~63 kg                                    |
+| Mission Type                | Space science & technology demonstration  |
+| Data Transmission           | 100 Mbps downlink; 1 Mbps uplink          |
+| BSTAR (Drag Term)           | 0.00033725                                |
+| Developer / Operator        | Spacety with BUPT                         |
+
+**Ground Server:** A terrestrial server acting as the MNO, with an Intel Xeon Gold 6330 CPU and 256 GB of RAM.
+
+**User Equipment (UE):** Two commodity phones, a Xiaomi 14 Ultra and a Google Pixel 9 Pro, used for end-to-end testing.
+
+
 ## References
 
 [Anonymous tokens (AT)](https://github.com/google/anonymous-tokens)
@@ -65,4 +91,11 @@ In `./Results`  we provide the datasets used in the LPG section 5 Evaluation. By
 
 [ECIES](https://github.com/ecies)
 
+[LOCA] Zhihong Luo, Silvery Fu, Natacha Crooks, Shaddi Hasan, Christian Maciocco, Sylvia Ratnasamy, and Scott Shenker. Loca: A location-oblivious cellular architecture. In NSDI, 2023.
+
+[PGPP] Paul Schmitt and Barath Raghavan. Pretty good phone privacy. In USENIX Security, 2021.
+
+[MOSAIC] Lixin Liu, Yuanjie Li, Hewu Li, Jiabo Yang, Wei Liu, Jingyi Lan, Yufeng Wang, Jiarui Li, Jianping Wu, Qian Wu, et al. Democratizing direct-to-cell low earth orbit satellite networks. In NSDI, 2024.
+
+[SPACECORE] Yuanjie Li, Hewu Li, Wei Liu, Lixin Liu, Yimei Chen, Jianping Wu, Qian Wu, Jun Liu, and Zeqi Lai. A case for stateless mobile core network functions in space. In ACM SIGCOMM, 2022.
 
